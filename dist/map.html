@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>地理院地図｜小青田町会</title>
+  <link href="./output.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 transition-all duration-300 ease-in-out text-gray-800 leading-relaxed">
+
+  <!--ヘッダー読込-->
+  <div id="header"></div>
+
+  <!-- メイン構成 -->
+  <main class="flex flex-col md:flex-row max-w-6xl mx-auto px-0 md:px-4 py-0 md:py-6s gap-6 sm:gap-4 md:mt-6">
+
+     <!--メインコンテンツ -->
+    <div class="md:w-2/3 flex flex-col gap-3">
+
+      <!-- 見出し囲み -->
+      <div class="p-4 shadow-sm my-2 border-b-2 border-purple-400 bg-white">
+        <h1 class="text-2xl md:text-3xl font-bold text-gray-600">地理院地図</h1>
+        <p class="text-gray-700 mt-2">
+          防災に役立つ地理院地図へのリンクと情報です。
+        </p>
+      </div>
+
+
+        <!-- コンテンツ -->
+      <section class="p-3 mx-2 md:mx-0 border-t border-purple-100 mt-0 md:mt-2">
+        <p class="text-gray-700 mb-2">
+          国土交通省･国土地理院の「地理院地図」です。<br>小青田地域はもちろん、日本全国の現在の地図と、同じ場所の昔の写真を重ね合わせて見ることができます。
+        </p>
+        <p class="text-gray-700 mb-6">
+          これにより、土地の成り立ちや災害のリスクを認識でき、防災にも役立つアイテムです。
+          あなたのご自宅がかつてどんな場所だったか、確認してみましょう。
+        </p>
+
+        <a href="https://maps.gsi.go.jp/" target="_blank" class="block mb-6">
+          <img src="./images/bousai_map_detail.png" alt="地理院地図の使用例" class="rounded shadow-md w-full max-w-3xl mx-auto">
+        </a>
+
+        <div class="bg-purple-50 border border-purple-200 rounded-md p-4 mb-6">
+          <h3 class="text-lg font-semibold text-purple-700 mb-2">簡単に使い方手順の説明です</h3>
+          <ul class="list-decimal list-inside space-y-1 text-sm text-gray-800">
+            <li>国土地理院のサイトを開きます。</li>
+            <li>見たい場所の地図を表示します。</li>
+            <li>左上の「地図」アイコンをクリックします。</li>
+            <li>メニューの「年代別の写真」を選びます。</li>
+            <li>年代をひとつ選んで標準図と重ね合わせるか、ふたつ選んでの写真を重ねられます。</li>
+            <li>左側メニューの下、「選択中の地図」に選んだ年代が出ます。</li>
+            <li>年代横の「透過率」のボタンで濃淡調整ができます（スマホではON/OFF切替）。</li>
+          </ul>
+          <div class="text-sm text-yellow-800 mt-3">小青田地域は写真の縦ぎ目になってしまい、黒い帯で表示されない場合があります。<br>おすすめは「1974年〜1978年」です。</div>
+          <div class="mt-4 text-center">
+            <a href="https://maps.gsi.go.jp/help/" target="_blank" class="inline-block bg-yellow-300 hover:bg-yellow-400 text-yellow-900 font-bold py-2 px-4 rounded">
+              国土地理院「地理院地図の使い方」へ
+            </a>
+          </div>
+        </div>
+
+        <div class="bg-purple-50 border border-purple-200 rounded-md p-6 text-center">
+          <h3 class="text-lg font-bold text-purple-700 mb-2">早速、使ってみましょう！</h3>
+          <p class="text-sm text-gray-700 mb-4">
+            ご自身の住んでいるところが、かつてどんな土地だったのか。これをみればすぐにわかります。
+            「堤防跡や河原跡って、ホントにこんな昔からあったんだね！」など、
+            近隣の歴史を知ることは、自分たちの地域をしっかりと認識すること。とても大切なことですね。
+          </p>
+          <a href="https://maps.gsi.go.jp/" target="_blank" class="inline-block bg-yellow-400 hover:bg-yellow-500 text-yellow-900 font-bold py-2 px-6 rounded">
+            すぐに地理院地図を見る
+          </a>
+        </div>
+      </section>
+    </div>
+
+    <!--サイドメニュー読込-->
+    <aside class="order-2 md:order-1 md:w-[30%] space-y-4 mx-2 md:mx-0" id="sidebar"></aside>
+
+  </main>
+
+    <!--フッター読込-->
+    <div id="footer"></div>
+
+    <!--共通パーツ読込-->
+    <script src="include.js"></script>
+
+  </body>
+  </html>

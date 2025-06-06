@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>小青田町会</title>
+  <link href="./output.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+    }
+  </style>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+      function toggleContent(button) {
+        const parent = button.closest("li");
+        const content = button.nextElementSibling;
+        content.classList.toggle("hidden");
+        parent.classList.toggle("group-open");
+      }
+  </script>
+</head>
+<body class="bg-gray-50 transition-all duration-300 ease-in-out text-gray-800 leading-relaxed">
+
+  <!--ヘッダー読込-->
+  <div id="header"></div>
+
+  <!-- メインイメージ -->
+  <section class="relative w-full h-[200px] md:h-[400px] overflow-hidden">
+    <img src="./images/koaota_main.png" alt="小青田エリア空撮" class="w-full h-full object-cover object-[50%_30%]">
+    <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white bg-gradient-to-t from-purple-300/20 via-purple-200/30 to-transparent">
+            <p class="text-xl md:text-5xl font-serif font-bold mb-2 drop-shadow-[0_3px_6px_rgba(0,0,0,0.7)] text-[#fefefe] ">
+              人と人をつなぐ、あたたかいまちづくり
+            </p>
+    </div>
+  </section>
+
+  <!-- メイン構成 -->
+  <main class="flex flex-col md:flex-row max-w-6xl mx-auto px-0 md:px-4 py-0 gap-6 sm:gap-4 md:mt-6">
+
+     <!--メインコンテンツ -->
+    <div class="md:w-2/3 flex flex-col gap-3">
+
+       <!-- ダウンロード系 -->
+      <section class="grid grid-cols-3 sm:grid-cols-1 md:grid-cols-3 gap-4 mt-6 md:mt-0 mx-2 md:mx-0">
+        <!-- 回覧板 -->
+        <a href="./chokai.html" class="group bg-white border border-gray-200 p-2 sm:p-4 rounded-lg text-center hover:shadow-lg transition-transform transform hover:scale-105 duration-200">
+          <i data-lucide="clipboard-list" class="w-6 h-6 sm:w-8 sm:h-8 text-purple-700 mb-1 block mx-auto transition-transform group-hover:scale-110"></i>
+          <h3 class="text-xs sm:text-lg font-semibold text-purple-700">回覧板</h3>
+          <p class="hidden sm:block text-sm text-gray-600">回覧板のバックナンバーが閲覧できます。</p>
+        </a>
+
+        <!-- ゴミ出しカレンダー -->
+        <a href="#" class="group bg-white border border-gray-200 p-2 sm:p-4 rounded-lg text-center hover:shadow-lg transition-transform transform hover:scale-105 duration-200">
+          <i data-lucide="trash-2" class="w-6 h-6 sm:w-8 sm:h-8 text-purple-700 mb-1 block mx-auto transition-transform group-hover:scale-110"></i>
+          <h3 class="text-xs sm:text-lg font-semibold text-purple-700">ゴミ出し</h3>
+          <p class="hidden sm:block text-sm text-gray-600">「柏地域2」のゴミ出しカレンダーです。</p>
+        </a>
+
+        <!-- 掃除当番一覧 -->
+        <a href="#" class="group bg-white border border-gray-200 p-2 sm:p-4 rounded-lg text-center hover:shadow-lg transition-transform transform hover:scale-105 duration-200">
+          <i data-lucide="calendar" class="w-6 h-6 sm:w-8 sm:h-8 text-purple-700 mb-1 block mx-auto transition-transform group-hover:scale-110"></i>
+          <h3 class="text-xs sm:text-lg font-semibold text-purple-700">掃除当番</h3>
+          <p class="hidden sm:block text-sm text-gray-600">ふるさとセンターの掃除当番表です。</p>
+        </a>
+      </section>
+
+
+     <!-- お知らせ -->
+    <section class="bg-white shadow-sm p-3 md:p-6 mx-2 md:mx-0 border border-purple-100">
+      <h2 class="text-xl md:text-2xl font-bold text-gray-600 mb-4 border-b border-purple-300 pb-2">お知らせ</h2>
+      <ul class="space-y-4">
+
+        <!-- お知らせ1 -->
+        <li class="group border border-purple-100 rounded-md overflow-hidden">
+          <button onclick="toggleContent(this)"
+            class="w-full text-left p-4 flex justify-between items-center hover:bg-purple-50 transition">
+            <div>
+              <span class="block text-sm text-gray-500">2025年5月25日</span>
+              <span class="text-sm md:text-lg text-purple-700 font-semibold">第3回 町内清掃のお知らせ（6月1日実施予定）</span>
+            </div>
+            <i data-lucide="chevron-down"
+              class="w-5 h-5 text-purple-700 transition-transform duration-300 group-[&.open]:rotate-180"></i>
+          </button>
+          <div class="hidden px-4 py-6 pb-4 text-sm text-gray-700" data-role="content">
+            雨天時の実施や集合場所、持ち物などの詳細をこちらに記載します。<br>
+            当日は朝8時に集合、軍手とごみ袋をご持参ください。
+          </div>
+        </li>
+
+        <!-- お知らせ2 -->
+        <li class="group border border-purple-100 rounded-md overflow-hidden">
+          <button onclick="toggleContent(this)"
+            class="w-full text-left p-4 flex justify-between items-center hover:bg-purple-50 transition">
+            <div>
+              <span class="block text-sm text-gray-500">2025年4月20日</span>
+              <span class="text-sm md:text-lg text-purple-700 font-semibold">資源回収のお知らせ</span>
+            </div>
+            <i data-lucide="chevron-down"
+              class="w-5 h-5 text-purple-700 transition-transform duration-300 group-[&.open]:rotate-180"></i>
+          </button>
+          <div class="hidden px-4 py-6 pb-4 text-sm text-gray-700" data-role="content">
+            資源回収は午前9時より開始いたします。回収場所は各ご家庭の前にお願いいたします。
+          </div>
+        </li>
+
+      </ul>
+    </section>
+
+
+    </div>
+
+    <!--サイドメニュー読込-->
+    <aside class="order-2 md:order-1 md:w-[30%] space-y-4 mx-2 md:mx-0" id="sidebar"></aside>
+
+  </main>
+
+    <!--フッター読込-->
+    <div id="footer"></div>
+
+    <!--共通パーツ読込-->
+    <script src="include.js"></script>
+
+    <script>
+      lucide.createIcons();
+    </script>
+
+    <!--アイコン開閉-->
+    <script type="module">
+      import { createIcons, icons } from "https://unpkg.com/lucide@latest/dist/esm/lucide.js";
+      createIcons({ icons });
+
+      window.toggleContent = function (btn) {
+        const li = btn.closest('li');
+        const content = li.querySelector('[data-role="content"]');
+        if (!content) return;
+
+        li.classList.toggle('open');
+        content.classList.toggle('hidden');
+
+        const icon = btn.querySelector('svg');
+        if (icon) icon.classList.toggle('rotate-180');
+      };
+    </script>
+
+</body>
+  </html>
