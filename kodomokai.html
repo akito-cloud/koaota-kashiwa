@@ -11,7 +11,19 @@
     body {
       font-family: 'Noto Sans JP', sans-serif;
     }
+    html {
+      scroll-behavior: smooth;
+    }
   </style>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+      function toggleContent(button) {
+        const parent = button.closest("li");
+        const content = button.nextElementSibling;
+        content.classList.toggle("hidden");
+        parent.classList.toggle("group-open");
+      }
+  </script>
 </head>
 <body class="bg-gray-100 transition-all duration-300 ease-in-out text-gray-800 leading-relaxed">
 
@@ -28,34 +40,278 @@
       <div class="p-4 shadow-sm border-b-2 border-purple-400 bg-white">
         <h1 class="text-2xl md:text-3xl font-bold text-gray-600">小青田子供会</h1>
         <p class="text-gray-700 mt-2">
-          小青田子供会は、小学生とその保護者を中心に構成された町会独自の団体です。<br>
-          子供たちの交流はもちろん、保護者同士の親睦も大切にしながら、地域で楽しい思い出づくりをしています。
+小青田地区に住む小学１年生〜６年生までの子供たちが在籍しています。<br>
+小青田ふるさとセンターを拠点に、イベントや地域のお祭りに参加し、小学生だけでなく、おじいちゃんおばあちゃん、未就学児を含めたご家族と共に楽しく活動しています。<br>
+同じ地域に暮らす子供たちが学年関係なく交流できるコミュニティとなること、地域と家庭のつながりを深め地域全体で子供たちの健やかな成長を見守ることを目的にしています。
         </p>
+
+        <div class="mt-4">
+          <a href="#kaihi" class="inline-block bg-purple-100 text-purple-700 text-sm px-4 py-2 rounded-md hover:bg-purple-200 transition font-bold">
+            入会案内はこちらから
+          </a>
+        </div>
+
       </div>
 
         <!-- コンテンツ -->
         <section class="p-3 mx-2 md:mx-0 border-t border-purple-100 mt-0 bg-white">
-          コンテンツ準備中です。
-<!--
-          <h2 class="text-lg font-semibold text-purple-700 mb-2">主な年間予定</h2>
-          <ul class="list-disc list-inside text-sm md:text-base text-gray-700 space-y-1">
-            <li><strong>5月22日(日)</strong> 令和4年度 総会</li>
-            <li><strong>7月2日(土)</strong> 七夕飾り付け<br>
-              <span class="ml-4 text-sm text-gray-500">(6/5 飾り配布・集金、6/25 飾り回収)</span>
-            </li>
-            <li><strong>7月25日(月)〜29日(金)</strong> ラジオ体操</li>
-            <li><strong>8月22日(月)〜26日(金)</strong> ラジオ体操</li>
-            <li><strong>10月23日(日)</strong> ハロウィンまつり</li>
-            <li><strong>2月5日(日)</strong> 令和5年度 役員選出</li>
-            <li><strong>2月26日(日)</strong> 卒業・進級を祝う会</li>
-            <li><strong>3月5日(日)</strong> 新1年生を迎える会</li>
-          </ul>
 
-          <p class="text-xs text-gray-500 mt-6">
-            ※今年度の「たなかっ子祭」「市民運動会」「新春・凧あげ大会」は、全て中止となりました。
-          </p>
+  <!-- 活動内容 -->
+  <div class="mb-5">
+    <h2 class="text-xl md:text-2xl font-bold text-purple-800 border-b border-purple-300 pb-1 mb-4">活動内容</h2>
+
+    <ul class="space-y-2 mt-2 text-gray-700">
+      <!-- 7月 -->
+      <li class="group border border-purple-100 rounded-md overflow-hidden">
+        <button onclick="toggleContent(this)" class="w-full text-left p-2 pl-4 flex justify-between items-center bg-purple-50 hover:bg-purple-50 transition">
+          <div>
+            <span class="block text-sm text-gray-500">7月</span>
+            <span class="text-sm md:text-lg text-purple-700 font-semibold">たなかっ子祭</span>
+          </div>
+          <i data-lucide="chevron-down" class="w-5 h-5 text-purple-700 transition-transform duration-300 group-[&.open]:rotate-180"></i>
+        </button>
+        <div class="hidden flex flex-col md:flex-row items-start gap-4 m-3" data-role="content">
+          <div class="md:w-2/3 text-sm text-gray-700 flex">
+            子ども神輿、輪おどり（柏おどり）、七夕飾りコンクール、お祭り広場などが催される夏まつりです。七夕飾りは、子供たちが願いを書いた短冊と飾りを作成し笹に飾り付けます。たなかっ子祭会場と柏たなか駅前通路に展示されます。
+          </div>
+          <div class="md:w-1/3">
+            <img src="./images/kodomokai_2025_07.jpg" alt="七夕飾りの写真" class="rounded-md shadow-md h-auto">
+          </div>
+        </div>
+      </li>
+      <!--夏休み -->
+      <li class="group border border-purple-100 rounded-md overflow-hidden">
+        <button onclick="toggleContent(this)" class="w-full text-left p-2 pl-4 flex justify-between items-center bg-purple-50 hover:bg-purple-100 transition">
+          <div>
+            <span class="block text-sm text-gray-500">夏休み</span>
+            <span class="text-sm md:text-lg text-purple-700 font-semibold">ラジオ体操</span>
+          </div>
+          <i data-lucide="chevron-down" class="w-5 h-5 text-purple-700 transition-transform duration-300 group-[&.open]:rotate-180"></i>
+        </button>
+        <div class="hidden flex-col md:flex-row items-start gap-4 m-3" data-role="content">
+          <div class="text-sm text-gray-700 flex">
+            夏の健康づくりと新学期に向けて生活リズムを整えるため、朝に公園で実施します。子どもはもちろん大人も一緒に、一日の始まりに元気に身体を動かしましょう。
+          </div>
+        </div>
+      </li>
+      <!--10月 -->
+      <li class="group border border-purple-100 rounded-md overflow-hidden">
+        <button onclick="toggleContent(this)" class="w-full text-left p-2 pl-4 flex justify-between items-center bg-purple-50 hover:bg-purple-100 transition">
+          <div>
+            <span class="block text-sm text-gray-500">10月</span>
+            <span class="text-sm md:text-lg text-purple-700 font-semibold">田中地区市民運動会</span>
+          </div>
+          <i data-lucide="chevron-down" class="w-5 h-5 text-purple-700 transition-transform duration-300 group-[&.open]:rotate-180"></i>
+        </button>
+        <div class="hidden flex-col md:flex-row items-start gap-4 m-3" data-role="content">
+          <div class="text-sm text-gray-700 flex">
+            地区対抗の運動会で町会ごとに大人と子供がチームとなり、玉入れや綱引き、リレー等の競技が行われます。老若男女誰もが楽しめて、地域住民の絆も深まります。
+          </div>
+        </div>
+      </li>
+    <!-- 11月 -->
+      <li class="group border border-purple-100 rounded-md overflow-hidden">
+        <button onclick="toggleContent(this)" class="w-full text-left p-2 pl-4 flex justify-between items-center bg-purple-50 hover:bg-purple-50 transition">
+          <div>
+            <span class="block text-sm text-gray-500">11月</span>
+            <span class="text-sm md:text-lg text-purple-700 font-semibold">小青田ふれあい祭</span>
+          </div>
+          <i data-lucide="chevron-down" class="w-5 h-5 text-purple-700 transition-transform duration-300 group-[&.open]:rotate-180"></i>
+        </button>
+        <div class="hidden flex flex-col md:flex-row items-start gap-4 m-3" data-role="content">
+          <div class="md:w-2/3 text-sm text-gray-700 flex">
+            小青田地域住民の親睦を深める秋祭りです。子供会では子ども神輿を担いで町内を練り歩きます。わっしょい！わっしょい！元気な子供たちの掛け声がお祭りを盛り上げます。
+          </div>
+          <div class="md:w-1/3">
+            <img src="./images/kodomokai_2025_11.jpg" alt="小青田ふれあい祭の写真" class="rounded-md shadow-md h-auto">
+          </div>
+        </div>
+      </li>
+    <!-- 1月 -->
+      <li class="group border border-purple-100 rounded-md overflow-hidden">
+        <button onclick="toggleContent(this)" class="w-full text-left p-2 pl-4 flex justify-between items-center bg-purple-50 hover:bg-purple-50 transition">
+          <div>
+            <span class="block text-sm text-gray-500">1月</span>
+            <span class="text-sm md:text-lg text-purple-700 font-semibold">新春凧揚げ大会</span>
+          </div>
+          <i data-lucide="chevron-down" class="w-5 h-5 text-purple-700 transition-transform duration-300 group-[&.open]:rotate-180"></i>
+        </button>
+        <div class="hidden flex flex-col md:flex-row items-start gap-4 m-3" data-role="content">
+          <div class="md:w-2/3 text-sm text-gray-700 flex">
+            田中地区の凧揚げ大会です。子供会では子どもたちが描いた凧をつなぎ合わせた連凧を作成し出場しています。会場には豚汁や綿あめ等の模擬店もあり、家族みんなで楽しめるイベントです。
+          </div>
+          <div class="md:w-1/3">
+            <img src="./images/kodomokai_2025_01.jpg" alt="新春凧揚げ大会の写真" class="rounded-md shadow-md h-auto">
+          </div>
+        </div>
+      </li>
+    <!-- 2月 -->
+      <li class="group border border-purple-100 rounded-md overflow-hidden">
+        <button onclick="toggleContent(this)" class="w-full text-left p-2 pl-4 flex justify-between items-center bg-purple-50 hover:bg-purple-50 transition">
+          <div>
+            <span class="block text-sm text-gray-500">2月</span>
+            <span class="text-sm md:text-lg text-purple-700 font-semibold">卒業・進級を祝う会</span>
+          </div>
+          <i data-lucide="chevron-down" class="w-5 h-5 text-purple-700 transition-transform duration-300 group-[&.open]:rotate-180"></i>
+        </button>
+        <div class="hidden flex flex-col md:flex-row items-start gap-4 m-3" data-role="content">
+          <div class="md:w-2/3 text-sm text-gray-700 flex">
+            卒業する６年生への感謝や進級する子供たちへお祝いの気持ちを込めて、お楽しみ会を開いています。子供会で過ごす最後の時間を楽しんでもらえるよう子供会役員が毎年工夫を凝らしています。記念品の豪華プレゼントは子供たちの毎年の楽しみです。
+          </div>
+          <div class="md:w-1/3">
+            <img src="./images/kodomokai_2025_02.jpg" alt="卒業・進級を祝う会の写真" class="rounded-md shadow-md h-auto">
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- 活動レポート -->
+  <div class="mb-5">
+    <h2 class="text-xl md:text-2xl font-bold text-purple-800 border-b border-purple-300 pb-1 mb-4">活動レポート</h2>
+    <ul class="mt-2 space-y-1 text-sm">
+      <li>
+        <i data-lucide="file-down" class="inline w-4 h-4 mr-1"></i>
+        <a href="./download/令和7年度小青田子供会年間行事予定_役員名抜き.pdf" class="text-purple-700 underline hover:text-indigo-700" target="_blank">
+          令和７年度年間行事予定はこちら
+        </a>
+      </li>
+      <li>
+        <i data-lucide="file-text" class="inline w-4 h-4 mr-1"></i>
+        <button class="text-purple-700 underline" onclick="openModal('2025tanabata')">令和7年6月8日 七夕飾り作成会</button>
+      </li>
+      <li>
+        <i data-lucide="file-text" class="inline w-4 h-4 mr-1"></i>
+        <button class="text-purple-700 underline" onclick="openModal('2025tanakakko')">令和7年7月6日 たなかっこ祭</button>
+      </li>
+    </ul>
+  </div>
+
+  <!-- モーダル本体（非表示）-->
+<div id="modal-2025tanabata" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+  <div class="bg-white max-w-lg w-full max-h-[90vh] overflow-y-auto p-6 rounded-md shadow-md">
+
+    <button onclick="closeModal('2025tanabata')" class="absolute top-4 right-4">
+      <i data-lucide="x" class="w-6 h-6 text-gray-600 hover:text-purple-600"></i>
+    </button>
+
+    <h3 class="text-lg font-bold mb-2">七夕飾り作成会</h3>
+    <p class="text-sm text-gray-700 mb-2">
+【日時】６月８日(日)　１０時～１２時<br>
+【場所】小青田ふるさとセンター<br>
+<br>
+<i data-lucide="file-down" class="inline w-4 h-4 mr-1"></i>
+<a href="./download/七夕かざりを作ろう！.pdf" class="text-purple-700 underline hover:text-indigo-700" target="_blank">
+  詳細はこちら
+</a>
+<br>
+<br>
+今年度初めてのイベントとなる七夕飾り作成会。今年は子供たちが小青田ふるさとセンターに集まり、短冊や飾りを作りながら交流を深める機会になるよう作成会を開催しました。<br>
+<br>
+折り紙を使った七夕飾りは、得意不得意があっても楽しめるように、貝飾り、吹き流し、星かざり、おおぎつづりの４種類と、折り紙好きの子や保護者の方向けに難易度高めな立体オーナメントの作り方を用意。当日参加してくださる皆さんが楽しめるようにと準備を進めました。<br>
+<br>
+当日は予想をはるかに上回る盛況ぶり。一時は満席になるほど賑わいました。<br>
+<br>
+子供たちは、どの飾りを作るか相談したり、完成した作品を見せ合ったり。兄弟姉妹で作り方を教え合ったりする姿が見られました。星飾りの星をハートやくらげの形にして楽しむ姿もあり、子供たちの発想力や想像力には驚かされました。<br>
+<br>
+楽しい！もう一つ作る！と、色とりどりの飾りをたくさん作ってくれました。笹に飾り付けたらどんな姿になるのか、たなかっ子祭が楽しみです。<br>
+<br>
+<br>
+こちらに、七夕飾りの作り方をご紹介します。ぜひ作ってみてください！<br>
+<br>
+<i data-lucide="file-down" class="inline w-4 h-4 mr-1"></i>
+<a href="./download/【印刷用】七夕飾り作り方.pdf" class="text-purple-700 underline hover:text-indigo-700" target="_blank">
+ 貝飾り・吹き流し・星かざり・おおぎつづり
+</a><br>
+<br>
+<i data-lucide="file-down" class="inline w-4 h-4 mr-1"></i>
+<a href="./download/【印刷用】大人用七夕飾りの作り方.pdf" class="text-purple-700 underline hover:text-indigo-700" target="_blank">
+  立体オーナメント
+</a>
+    </p>
+    <button onclick="closeModal('2025tanabata')" class="mt-6 px-4 py-2 border border-purple-300 text-purple-700 rounded hover:bg-purple-50">とじる</button>
+  </div>
+</div>
+
+<div id="modal-2025tanakakko" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+  <div class="bg-white max-w-lg w-full max-h-[90vh] overflow-y-auto p-6 rounded-md shadow-md">
+
+    <button onclick="closeModal('2025tanakakko')" class="absolute top-4 right-4">
+      <i data-lucide="x" class="w-6 h-6 text-gray-600 hover:text-purple-600"></i>
+    </button>
+
+    <h3 class="text-lg font-bold mb-2">たなかっ子祭</h3>
+    <p class="text-sm text-gray-700 mb-2">
+※令和７年度の開催は猛暑予想のため中止となりました。<br>
+【日時】７月６日(日) 午前９時～正午<br>
+【場所】柏市立田中中学校
+<br>
+<br>
+<i data-lucide="file-down" class="inline w-4 h-4 mr-1"></i>
+<a href="./download/R7たなかっ子祭りチラシ.pdf" class="text-purple-700 underline hover:text-indigo-700" target="_blank">
+  詳細はこちら
+</a><br>
+<br>
+<div>
+  <img src="./images/kodomokai_tanakakko.jpeg" alt="たなかっ子祭" class="rounded-md shadow-md max-w-sm h-auto mx-auto object-contain">
+</div>
+<br>
+たなかっ子祭は猛暑のため残念ながら中止となりましたが、当日は予定を変更してお菓子の配布と笹への飾りつけ作業を子供たちや保護者の皆様と一緒に行いました。<br>
+<br>
+小青田ふるさとセンターの入り口前には、大きな笹がスタンバイ。<br>
+すごーい！大きい！と子供たちは大喜びです。お菓子を受け取ると、自分の願い事を書いた短冊を好きな場所に取り付けていきました。笹の枝に紐を縛り付ける作業は難しい様子もありましたが、一生懸命に行ってくれました。<br>
+<br>
+飾りつけられた笹は、柏たなか駅前連絡通路へ展示させていただきました。<br>
+まっすぐに伸びた笹を彩る鮮やかな七夕飾り、サラサラと風になびく葉の音は、暑さを忘れさせるほど綺麗でした。<br>
+<br>
+展示は、７月６日（日）～７月１５日（水）までとなります。ぜひご覧ください。<br>
+<br>
+また、小青田町会の役員のみなさまには、笹の準備から駅通路への設置までご協力をいただきありがとうございました。<br>
+<br>
+子どもたちの願いがどうか天まで届きますように・・・
+    </p>
+    <button onclick="closeModal('2025tanakakko')" class="mt-6 px-4 py-2 border border-purple-300 text-purple-700 rounded hover:bg-purple-50">とじる</button>
+  </div>
+</div>
+
+  <!-- 会費 -->
+  <div class="mb-5" id="membership">
+    <h2 id="kaihi" class="text-xl md:text-2xl font-bold text-purple-800 border-b border-purple-300 pb-1 mb-4">会費</h2>
+    <div class="mt-2 text-gray-700">
+      小青田町会に加入済： (保護者1名 + 子供の人数) × ¥1,200<br>
+      未加入： (保護者1名 + 子供の人数) × ¥1,200 + 免責金 ¥2,500<br>
+      <div class="text-sm mt-2">
+        ※年会費となります。<br>
+        ※途中退会される場合でも返金は致しかねます。
+      </div>
+    </div>
+  </div>
+
+  <!-- 入会案内 -->
+  <div class="mb-5">
+    <h2 class="text-xl md:text-2xl font-bold text-purple-800 border-b border-purple-300 pb-1 mb-4">入会案内</h2>
+    <p class="mt-2 text-gray-700">
+      小青田在住の小学生が対象です。何年生からでもご入会いただけます。
+      <div class="text-sm mt-2 mb-5">
+        ※年度の途中からでも入会可能です。
+      </div>
+    </p>
+    <p class="mt-2">
+      入会をご希望の方は、下記のフォームからお申し込みをお願いします。<br>
+      <a href="https://forms.gle/MX5RFS5TsLzezyeK6" class="inline-flex items-center gap-1 text-purple-700 underline hover:text-indigo-700" target="_blank">
+        <i data-lucide="external-link" class="w-4 h-4"></i>
+        入会申し込みフォームはこちら
+      </a>
+    </p>
+    <p class="mt-2">
+      ご質問・お問い合わせは、下記のメールアドレスまでご連絡ください。<br>
+      <a href="mailto:koaota.kodomo@gmail.com" class="text-purple-700 underline hover:text-indigo-700">
+        koaota.kodomo@gmail.com
+      </a>
+    </p>
+  </div>
+
         </section>
--->
     </div>
 
     <!--サイドメニュー読込-->
@@ -68,6 +324,33 @@
 
     <!--共通パーツ読込-->
     <script src="include.js"></script>
+
+        <!--アイコン開閉-->
+    <script type="module">
+      import { createIcons, icons } from "https://unpkg.com/lucide@latest/dist/esm/lucide.js";
+      createIcons({ icons });
+
+      window.toggleContent = function (btn) {
+        const li = btn.closest('li');
+        const content = li.querySelector('[data-role="content"]');
+        if (!content) return;
+
+        li.classList.toggle('open');
+        content.classList.toggle('hidden');
+
+        const icon = btn.querySelector('svg');
+        if (icon) icon.classList.toggle('rotate-180');
+      };
+    </script>
+  
+    <script>
+      function openModal(id) {
+        document.getElementById(`modal-${id}`).classList.remove("hidden");
+      }
+      function closeModal(id) {
+        document.getElementById(`modal-${id}`).classList.add("hidden");
+      }
+    </script>
 
   </body>
   </html>
