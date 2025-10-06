@@ -21,6 +21,16 @@
         parent.classList.toggle("group-open");
       }
   </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XY21RZNZ49"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XY21RZNZ49');
+</script>
+
 </head>
 <body class="bg-gray-100 transition-all duration-300 ease-in-out text-gray-800 leading-relaxed">
 
@@ -133,6 +143,33 @@
         </li>
         -->
         <!-- お知らせ -->
+        <li class="group border border-purple-100 rounded-md overflow-hidden">
+          <button onclick="toggleContent(this)"
+            class="w-full text-left p-4 flex justify-between items-center hover:bg-purple-50 transition">
+            <div>
+              <span class="block text-sm text-gray-500">令和7年10月5日（日）</span>
+              <span class="text-sm md:text-lg text-purple-700 font-semibold">ふれあい祭等役員会開催のお知らせ</span>
+            </div>
+            <i data-lucide="chevron-down"
+              class="w-5 h-5 text-purple-700 transition-transform duration-300 group-[&.open]:rotate-180"></i>
+          </button>
+          <div class="hidden px-4 py-6 pb-4 text-sm text-gray-700" data-role="content">
+秋の候、ますます御健勝のこととお喜び申し上げます。平素は町会活動に格別のご高配を賜り、厚く御礼を申し上げます。 <br>
+さて、小青田町会主催の<span class="text-red-600 font-semibold">ふれあい祭を11月16日(日)に開催</span>いたします。町会役員の皆様におかれましては、開催当日のお手伝いをお願いしたく、次の通り役員会を開催いたします。 <br>
+また、併せて下期町会費集金に関わる説明と資料を配布します。お忙しい中とは存じますが、ご協力のほどよろしくお願いいたします。 <br>
+            <br>
+            日　付：令和7年10月25日（土）<br>
+            時　間：19:00 ～<br>
+            場　所：小青田ふるさとセンター<br>
+            内　容：<br>
+            ・ふれあい祭開催について<br>
+            ・下期町会費集金について<br>
+            ・その他<br>
+            対象役員：<br>
+            町会三役、班長、運営委員、柏市民健康づくり推進員、監事、民生委員、子供会、ふれあい祭実行委員
+          </div>
+        </li>
+
         <li class="group border border-purple-100 rounded-md overflow-hidden">
           <button onclick="toggleContent(this)"
             class="w-full text-left p-4 flex justify-between items-center hover:bg-purple-50 transition">
