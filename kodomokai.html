@@ -179,12 +179,18 @@
   <!-- 活動レポート -->
   <div class="mb-5">
     <h2 class="text-xl md:text-2xl font-bold text-purple-800 border-b border-purple-300 pb-1 mb-4">活動レポート</h2>
-    <ul class="mt-2 space-y-1">
+    <ul class="mt-2 mb-5 space-y-1">
       <li>
         <i data-lucide="file-down" class="inline w-4 h-4 mr-1"></i>
         <a href="./download/令和7年度小青田子供会年間行事予定_役員名抜き.pdf" class="text-purple-700 underline hover:text-indigo-700" target="_blank">
           令和７年度年間行事予定はこちら
         </a>
+      </li>
+    </ul>
+    <ul class="mt-2 space-y-1">
+      <li>
+        <i data-lucide="file-text" class="inline w-4 h-4 mr-1"></i>
+        <button class="text-purple-700 underline" onclick="openModal('2025undokai')">令和7年10月5日 田中地区市民運動会</button>
       </li>
       <li>
         <i data-lucide="file-text" class="inline w-4 h-4 mr-1"></i>
@@ -202,6 +208,44 @@
   </div>
 
 <!-- モーダル本体（非表示）-->
+ <div id="modal-2025undokai" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+  <div class="bg-white relative max-h-[80vh] overflow-y-auto p-6 rounded-md shadow-md w-[98%] max-w-md">
+    <button onclick="closeModal('2025undokai')" class="absolute top-2 right-2 text-xl text-gray-500 hover:text-gray-800" aria-label="閉じる">×</button>
+
+    <h3 class="text-lg font-bold mb-2">がんばる姿に拍手！田中地区市民運動会</h3>
+    <div class="text-sm text-gray-700 mb-2">
+【日時】10月5日（日） 8:30〜13:00<br>
+【場所】田中中学校グラウンド<br>
+<br>
+<i data-lucide="file-down" class="inline w-4 h-4 mr-1"></i>
+<a href="./download/第６０回地区市民運動会・詳細版.pdf" class="text-purple-700 underline hover:text-indigo-700" target="_blank">
+  運動会チラシ
+</a>
+<br>
+<br>
+前日の雨でグラウンドの状態が心配されましたが、当日は無事に開催することができました。<br>
+開会式のころには雲の間から青空がのぞき、しばらくすると、かき氷が恋しくなるほどの暑さと日差しに。<br>
+<br>
+今年度は、大人もお腹が空かないようにと、お菓子を配布。<br>
+町会からは飲み物とかき氷もご用意いただき、みんなで楽しく味わいました。<br>
+<div class="mb-2 mt-2">
+  <img src="./images/kodomokai_2025_10_2.jpg" alt="運動会2" class="rounded-md shadow-md max-w-sm h-auto mx-auto object-contain">
+</div>
+途中からは真夏のような陽ざしの中、選手の皆さんはもちろん、応援の子どもたちも旗やポンポンを振って元気いっぱい！<br>
+<br>
+ムカデ競争では見事１位になるなど、たくさんの笑顔があふれる一日となりました。<br>
+<br>
+競技に出場してくださった皆さま、応援してくださった皆さま、そして片付けを手伝ってくださった皆さま、本当にありがとうございました。
+<div class="mb-2 mt-2">
+  <img src="./images/kodomokai_2025_10_1.jpg" alt="運動会1" class="rounded-md shadow-md max-w-sm h-auto mx-auto object-contain">
+</div>
+
+</div>
+    <button onclick="closeModal('2025undokai')" class="mt-6 px-4 py-2 border border-purple-300 text-purple-700 rounded hover:bg-purple-50">とじる</button>
+  </div>
+</div>
+
+
  <div id="modal-2025radio" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
   <div class="bg-white relative max-h-[80vh] overflow-y-auto p-6 rounded-md shadow-md w-[98%] max-w-md">
     <button onclick="closeModal('2025radio')" class="absolute top-2 right-2 text-xl text-gray-500 hover:text-gray-800" aria-label="閉じる">×</button>
