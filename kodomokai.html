@@ -181,10 +181,14 @@
     <h2 class="text-xl md:text-2xl font-bold text-purple-800 border-b border-purple-300 pb-1 mb-4">活動レポート</h2>
     <ul class="mt-2 mb-5 space-y-1">
       <li>
-        <i data-lucide="file-down" class="inline w-4 h-4 mr-1"></i>
-        <a href="./download/令和7年度小青田子供会年間行事予定_役員名抜き.pdf" class="text-purple-700 underline hover:text-indigo-700" target="_blank">
-          令和７年度年間行事予定はこちら
-        </a>
+<a
+  class="inline-flex items-center gap-1 text-purple-700 underline hover:text-indigo-700 transition-colors duration-200"
+  href="./download/令和7年度小青田子供会年間行事予定_役員名抜き.pdf"
+  target="_blank"
+>
+  <i data-lucide="file-down" class="w-4 h-4"></i>
+  令和７年度年間行事予定はこちら
+</a>
       </li>
     </ul>
     <ul class="mt-2 space-y-1">
@@ -578,7 +582,11 @@
     <!--共通パーツ読込-->
     <script src="include.js"></script>
 
-        <!--アイコン開閉-->
+    <script>
+      lucide.createIcons();
+    </script>
+
+    <!--アイコン開閉-->
     <script type="module">
       import { createIcons, icons } from "https://unpkg.com/lucide@latest/dist/esm/lucide.js";
       createIcons({ icons });
